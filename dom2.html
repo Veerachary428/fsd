@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<script src="./test.js"-->
+</script>
+<style>
+    .text{
+        color: aqua;
+        font-size: 70px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .text{
+        color: aquamarine;
+        font-size: 70px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+     @media(max-width:800px){
+        .text{
+            color: orange;
+        }
+     }    
+</style>
+</head>
+<body>
+    <div class="main-container" id="root">
+        <h1>heading</h1>
+    </div>
+    <script>
+        let rootElement = document.getElementById("root")
+        rootElement.textContent = "Main DIV";
+        rootElement.style.color = "red";
+        rootElement.style.fontSize = "50px";
+
+        let heading1 = document.createElement("h1");
+        heading1.textContent = "This is H1";
+        // heading1.classList.add("text"); // for the apppend of the external css
+        // heading1.setAttribute("class" , "text")
+        // heading1.removeAttribute("class","text") // used to remove the attribute
+        rootElement.appendChild(heading1); 
+        // rootElement.removeChild(heading); // use to delete the child from  the root element
+
+
+        let passage = document.createElement("p");
+         passage.textContent = "This is passage";
+         passage.style.color = "purple";
+        rootElement.appendChild(passage);
+
+        //rootElement.classList.add("main-container")
+
+        //  heading1.addEventListener("click",function (){ // click action and the mouseover
+        //  heading1.classList.add("text1")
+        //  heading1.textContent = "heading1 is clicked"
+
+        // });
+
+        passage.addEventListener("click",function (){ // click action and the mouseover
+         passage.classList.add("text")
+         passage.textContent = "passage is clicked"
+
+        });
+
+        // heading1.addEventListener("click",function (){ // click action and the mouseover
+        //     heading1.classList.toggle("text1")
+            
+        // });
+                // toggel = add + remove
+
+        document.addEventListener("keydown" , function(event){
+            
+            if(event.key == 'z'){
+                heading1.classList.toggle("text1")
+                
+            }
+        }) 
+        
+        // document.addEventListener("keyup" , function(event){
+        //     console.log("the key released is: ",event.key)
+        // }) 
+
+
+            //element.addEventListener("event" , function)
+
+    //     //let name = function(){
+    //       let a = 10
+    //       return(a)
+        //      }  
+            </script>
+</body>
+</html>

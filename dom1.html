@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        let rootElement=document.getElementById("root");
+        rootElement.textContent="Main div";
+        rootElement.style.color="blue";
+        rootElement.style.fontSize="20px";
+
+        let heading1=document.createElement("h1");
+        heading1.textContent="this is h1";
+        rootElement.appendChild(heading1);
+        heading1.style.color="red";
+
+        
+
+        let para1=document.createElement("p");
+        para1.textContent="this is paragraph";
+        rootElement.appendChild(para1);
+        para1.style.color="blue";
+        </script>
+
+</body>
+</html>

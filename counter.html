@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <style>
+    
+    div{
+        text-align: center;
+    }
+    .count{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 100px;
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+    }
+    *{
+        margin: 10px;
+    }
+    
+    button{
+        height:6vh;
+        width:15vw;
+        margin:10px;
+        color:blue;
+    }
+
+   </style>
+    
+</head>
+<body>
+
+<div id="head">
+    <h1>counter app</h1>
+    <p class="count" id="counter">0</p>
+    <button class="btn btn-primary " onclick="increment()" id="inc">increment</button>
+    <button class="btn btn-danger" onclick="reset()" id="res">reset</button>
+    <button class="btn btn-primary" onclick="decrement()" id="des">decrement</button>
+</div>
+    <script>
+        let c = 0;
+        let countValue = document.getElementById('counter');
+        let decButton = document.getElementById('des')
+        let incButton = document.getElementById('inc')
+        let resButton = document.getElementById('res')
+      function increment(){
+        c++;
+        countValue.textContent = c;
+        buttonColorUpdate();
+      }
+      function reset(){
+        c=0;
+        countValue.textContent= c;
+        buttonColorUpdate();
+      }
+
+      function decrement(){
+        c--;
+        countValue.textContent = c;
+        buttonColorUpdate();
+        
+        }
+      
+
+      function buttonColorUpdate(){
+        if(c == 0){
+            decButton.style.backgroundColor = "";
+            incButton.style.backgroundColor = "";
+        }else if(c % 2 === 0){
+            incButton.style.backgroundColor = "yellow";
+            decButton.style.backgroundColor = "";
+            decButton.style.Color = "white";
+            incButton.style.color = "black";
+        } else {
+            incButton.style.backgroundColor = "";
+            decButton.style.backgroundColor = "green";
+            decButton.style.color = "black";
+        }  
+        }
+      
+    </script>
+</body>
+</html>

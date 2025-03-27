@@ -1,0 +1,31 @@
+*{
+    margin:0;
+}
+h1{
+    color: brown;
+}
+.class{
+    background-color: red;
+}
+#welcome{
+    background-color: aqua;
+    font-size: 15;
+}
+input[type="text"]
+input[type="number"]{
+    height: 140;
+    width: 70;
+}
+.parent #welcome{
+    background: darkorange;
+}
+.child-selector>.hii{
+    font-size: large;
+    color: green;
+    margin-top: 120px;
+}
+.adjacent-div+p{
+    color: deeppink;
+}
+
+
